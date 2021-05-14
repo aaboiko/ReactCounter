@@ -6,15 +6,16 @@ const countSlice = createSlice({
     name: 'count',
     initialState,
     reducers: {
-        increment: (state) => {
-            state += 1;
+        INCREMENT: (state) => {
+            return state + 1;
         },
-        decrement: (state) => {
-            state -= 1;
+        DECREMENT: (state) => {
+            console.log("sdf");
+            return state - 1;
         }
     }
 });
 
-export const {increment, decrement} = countSlice.actions;
+export const { INCREMENT, DECREMENT } = countSlice.actions;
 
 export default countSlice.reducer;
